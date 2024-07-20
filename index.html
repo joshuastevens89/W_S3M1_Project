@@ -55,8 +55,32 @@
     // 🧠 Calling `down` changes the `altitude` prop appropriately and returns the updated `altitude`.
     // 🧠 If calling `down` would cause the plane to go below altitude zero, `altitude` is set to 0 and the string "CRASH!" is returned.
     class AirPlane {
+      constructor(model,altitude) {
+        this.model = model
+        this.altitude = altitude
+        this.altitude = 0
+
+      }
+      up(num) {
+        this.altitude += num 
+        num = 10
+        return num
+      }
+      down(number) {
+        this.altitude -= number
+        number = 7
+        
+        if(this.altitude <= 0) {
+         this.altitude = 0
+          return "CRASH!"
+        
+        }
+        return this.altitude 
+      }
 
     }
+    Plane = new AirPlane('f150',this.altitude)
+
 
     // 👉 CHALLENGE 3
     // 🧠 Build a Bulb class.
