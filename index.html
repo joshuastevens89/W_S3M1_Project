@@ -25,8 +25,25 @@
     // 🧠 The person also has an `ageGracefully` method, which increases `age` by 1 each time it's called.
     // 🧠 But there's a catch: once `age` reaches 12, the `ageGracefully` method will have no effect.
     class PeterPan {
+      constructor(name,age) {
+        this.name = name
+        this.age = age
+        this.age = 0
+        
+
+
+      }
+      ageGracefully() {
+        if (this.age < 12){
+          this.age += 1
+          // console.log(this.age)
+        }
+      }
+
 
     }
+    let Joe = new PeterPan('Joe',this.age);
+    console.log(Joe)
 
     // 👉 CHALLENGE 2
     // 🧠 Build an AirPlane class. This class allows to instantiate airplanes.
